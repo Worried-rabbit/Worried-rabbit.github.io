@@ -31,7 +31,7 @@ for (let i = 0; i < articles.length; i++) {
     }
 }
 let el = document.querySelector('.article').innerHTML;
-
+console.log(el);
 let md = new Markdown(el);
 let div = document.createElement('div');
 md.parseHTML().forEach(element => {

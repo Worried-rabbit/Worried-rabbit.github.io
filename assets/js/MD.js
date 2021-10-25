@@ -11,6 +11,7 @@ export default class Markdown {
         res.split('\n').forEach(text => {
             this.res.push(text.trim());
         });
+        console.log(this.res + '1');
     }
 
     parseHTML() {
@@ -19,8 +20,10 @@ export default class Markdown {
             let arr = [];
             if (element.indexOf('#') == 0) {
                 arr = element.match(/(#+\s(1))|(\S+)|\n/g);
+                console.log(arr + 2);
             } else {
                 arr = element;
+                console.log(arr + 3);
             }
             if (Array.isArray(arr)) {
                 let num;
@@ -38,6 +41,7 @@ export default class Markdown {
                 textArr.push(el)
             }
         });
+        console.log(textArr + 4);
         return textArr;
     }
 }
