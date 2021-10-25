@@ -76,7 +76,8 @@ for (let i = 0; i < articles.length; i++) {
 let el = document.querySelector('.article').innerHTML;
 
 let md = new Markdown(el);
-console.log(md.parseHTML());
+let div = document.createElement('div');
 md.parseHTML().forEach(element => {
-    document.querySelector('.aaaa').append(element);
+    div.append(element);
 });
+document.querySelector('.article').innerHTML = div.innerHTML;
