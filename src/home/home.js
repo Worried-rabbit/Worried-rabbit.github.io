@@ -49,6 +49,12 @@ function renderHTML() {
         });
         mainContent.insertBefore(newContent, document.querySelector('.btn'))
         Animate.create().use(Translate).mount(document.querySelectorAll('.content_one'));
+        let atitle = document.querySelectorAll('.title')
+        Array.from(atitle).forEach(el => {
+            el.addEventListener('click', function() {
+                window.location.href = `articleDetails.html?id=${this.dataset.id}`
+            })
+        })
     }
 }
 
@@ -74,11 +80,3 @@ function dataLoad() {
     renderHTML();
 }
 btn.addEventListener('click', dataLoad);
-
-
-let atitle = document.querySelectorAll('.title')
-Array.from(atitle).forEach(el => {
-    el.addEventListener('click', function() {
-        window.location.href = `articleDetails.html?id=${this.dataset.id}`
-    })
-})
