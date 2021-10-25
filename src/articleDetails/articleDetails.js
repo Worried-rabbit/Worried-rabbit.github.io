@@ -8,8 +8,6 @@ let url2 = new Url({
     name: 'xiaoming',
     id: '1'
 });
-console.log(url.get('id'));
-console.log(url2.parse());
 
 function HTMLparse(str) {
     let div = document.createElement('div')
