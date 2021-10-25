@@ -1,0 +1,48 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.change {
+    animation: move 2s;
+}
+
+.content {
+    animation: leftFly 1s;
+    animation-fill-mode: forwards;
+}
+
+.text-opacity {
+    left: 0px;
+    animation: trans 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes trans {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes leftFly {
+    from {
+        left: -900px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes move {
+    to {
+        background: yellow;
+    }
+}
+body {
+  background-color: green;
+}
+

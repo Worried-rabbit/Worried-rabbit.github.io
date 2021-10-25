@@ -36,18 +36,7 @@
     }
     
     .avator {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 2px;
-        width: 70px;
-        height: 70px;
-        left: 200px;
-        background: #9254de;
-        transform-origin: bottom right;
         animation: roll 5s;
-        box-shadow: 0 0 15px #d3adf7, 0 0 30px #d3adf7, 0 0 40px #d3adf7;
     }
     
     .avator img {
@@ -97,33 +86,17 @@
         background: #000;
     }
     
-    footer span {
-        font-size: 16px;
+    .footer_span {
         animation: foot 3s;
-        animation-delay: 9s;
     }
     
     .loding {
-        position: relative;
         animation: lodingFont 4s;
-        animation-delay: 5s;
-        top: 20px;
-        left: 700px;
         animation-fill-mode: forwards;
     }
     
     .btn {
-        position: relative;
-        height: 50px;
-        width: 100px;
-        left: 350px;
-        border-radius: 10px;
-        font-size: 20px;
-        top: -500px;
-        background-color: #b37feb;
-        color: #85a5ff;
         animation: endBtn 5s;
-        animation-delay: 12s;
         animation-fill-mode: forwards;
     }
     
@@ -133,7 +106,43 @@
         animation-duration: 2s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
-        /*不出来*/
+    }
+    
+    .avator_img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 2px;
+        width: 70px;
+        height: 70px;
+        left: 200px;
+        background: #9254de;
+        box-shadow: 0 0 15px #d3adf7, 0 0 30px #d3adf7, 0 0 40px #d3adf7;
+        transform-origin: bottom right;
+    }
+    
+    .loding_text {
+        position: relative;
+        top: 20px;
+        left: 700px;
+    }
+    
+    .end {
+        position: relative;
+        height: 50px;
+        width: 100px;
+        left: 350px;
+        border-radius: 10px;
+        font-size: 20px;
+        top: -500px;
+        animation-fill-mode: forwards;
+        background-color: #b37feb;
+        color: #85a5ff;
+    }
+    
+    .span_text {
+        font-size: 16px;
     }
     
     @keyframes hide {
