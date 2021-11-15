@@ -14,10 +14,13 @@
             & .avator {
                 animation: roll 5s;
 
-                & img {
+            }
+            & .avator_img {
+                img{
                     height: 80%;
                     width: 80%;
                 }
+                
             }
         }
 
@@ -44,29 +47,29 @@
                 background-image: linear-gradient(0deg, #597ef7, #b37feb 35%, #ff7875 60%, #f759ab 100%);
                 animation: rotate 1s linear infinite;
 
-                & .circle::before {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                    background-image: linear-gradient(0deg, #597ef7, #b37feb 35%, #ff7875 60%, #f759ab 100%);
-                    filter: blur(35px);
-                }
-
-                & .circle::after {
-                    content: "";
-                    position: absolute;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 250px;
-                    height: 250px;
-                    border-radius: 50%;
-                    background: #000;
-                }
+                
+            }
+            & .circle::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-image: linear-gradient(0deg, #597ef7, #b37feb 35%, #ff7875 60%, #f759ab 100%);
+                filter: blur(35px);
             }
 
+            & .circle::after {
+                content: "";
+                position: absolute;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                background: #000;
+            }
             & .circle-span {
                 position: absolute;
                 display: flex;
@@ -143,11 +146,6 @@
         box-shadow: 0 0 15px #d3adf7, 0 0 30px #d3adf7, 0 0 40px #d3adf7;
         transform-origin: bottom right;
     }
-    
-   
-    
-    
-   
     
     @keyframes hide {
         from {
