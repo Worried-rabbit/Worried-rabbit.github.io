@@ -1,3 +1,165 @@
+    // * {
+    //     margin: 0px;
+    //     padding: 0px;
+    // }
+    
+    // #wrap {
+    //     width: 100vw;
+    //     height: 100vh;
+    //     & header {
+    //         height: 10vh;
+    //         width: 100%;
+    //         background-color: #d3adf7;
+
+    //         & .avator {
+    //             animation: roll 5s;
+
+    //         }
+    //         & .avator_img {
+    //             img{
+    //                 height: 80%;
+    //                 width: 80%;
+    //             }
+                
+    //         }
+    //     }
+
+    //     & main {
+    //         height: 80vh;
+    //         width: 100%;
+    //         background-color: #9254de;
+    //         color: aliceblue;
+    //         font-size: 15px;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         overflow: hidden;
+
+    //         & .circle {
+    //             position: relative;
+    //             width: 300px;
+    //             height: 300px;
+    //             left: 80px;
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+    //             border-radius: 50%;
+    //             background-image: linear-gradient(0deg, #597ef7, #b37feb 35%, #ff7875 60%, #f759ab 100%);
+    //             animation: rotate 1s linear infinite;
+
+                
+    //         }
+    //         & .circle::before {
+    //             content: "";
+    //             position: absolute;
+    //             width: 100%;
+    //             height: 100%;
+    //             border-radius: 50%;
+    //             background-image: linear-gradient(0deg, #597ef7, #b37feb 35%, #ff7875 60%, #f759ab 100%);
+    //             filter: blur(35px);
+    //         }
+
+    //         & .circle::after {
+    //             content: "";
+    //             position: absolute;
+    //             display: flex;
+    //             justify-content: space-around;
+    //             align-items: center;
+    //             width: 250px;
+    //             height: 250px;
+    //             border-radius: 50%;
+    //             background: #000;
+    //         }
+    //         & .circle-span {
+    //             position: absolute;
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+    //         }
+
+    //         & .end {
+    //             position: relative;
+    //             height: 50px;
+    //             width: 100px;
+    //             left: 350px;
+    //             border-radius: 10px;
+    //             font-size: 20px;
+    //             top: 200px;
+    //             background-color: #b37feb;
+    //             color: #85a5ff;
+    //         }
+    //         & .loding_text {
+    //             position: relative;
+    //             top: 20px;
+    //             left: -10px;
+    //         }
+    //     }
+
+
+    //     & footer {
+    //         height: 10vh;
+    //         width: 100%;
+    //         background-color: #d3adf7;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+
+    //         & .span_text {
+    //             font-size: 16px;
+    //         }
+    //     } 
+    // }
+    
+    // .footer_span {
+    //     animation: foot 3s;
+    // }
+    
+    // .btn {
+    //     animation: endBtn 5s;
+    //     animation-fill-mode: forwards;
+    // }
+    
+    // .owrap {
+    //     position: relative;
+    //     animation-name: hide;
+    //     animation-duration: 2s;
+    //     animation-timing-function: linear;
+    //     animation-fill-mode: forwards;
+    // }
+    
+    // .avator_img {
+    //     position: relative;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     top: 2px;
+    //     width: 70px;
+    //     height: 70px;
+    //     left: 200px;
+    //     background: #9254de;
+    //     box-shadow: 0 0 15px #d3adf7, 0 0 30px #d3adf7, 0 0 40px #d3adf7;
+    //     transform-origin: bottom right;
+    // }
+    
+    // @keyframes hide {
+    //     from {
+    //         bottom: 0px;
+    //     }
+    //     to {
+    //         bottom: 100vh;
+    //     }
+    // }
+
+    
+    // @keyframes rotate {
+    //     0% {
+    //         transform: rotate(0deg);
+    //     }
+    //     100% {
+    //         transform: rotate(360deg);
+    //     }
+    // }
+
     * {
         margin: 0px;
         padding: 0px;
@@ -6,156 +168,56 @@
     #wrap {
         width: 100vw;
         height: 100vh;
-        & header {
-            height: 10vh;
-            width: 100%;
-            background-color: #d3adf7;
+        background: url(../../img/background2.jpg);
+        background-size: 100%;
 
-            & .avator {
-                animation: roll 5s;
-
-            }
-            & .avator_img {
-                img{
-                    height: 80%;
-                    width: 80%;
+        & .mask{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,.5);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            & .avator{
+                margin-top: 30px;
+                height: 210px;
+                width: 210px;
+                border-radius: 50%;
+                overflow: hidden;
+                & img{
+                    height: 400px;
                 }
-                
             }
-        }
-
-        & main {
-            height: 80vh;
-            width: 100%;
-            background-color: #9254de;
-            color: aliceblue;
-            font-size: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-
-            & .circle {
-                position: relative;
-                width: 300px;
-                height: 300px;
-                left: 80px;
+            & .title{
+                font-size: 30px;
+                color: #fff;
+            }
+            & .describe{
+                border-top: 2px  solid rgba(255, 255, 255, .5);
+                border-bottom: 2px  solid rgba(255, 255, 255, .5);
+                padding: 20px 30px;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                border-radius: 50%;
-                background-image: linear-gradient(0deg, #597ef7, #b37feb 35%, #ff7875 60%, #f759ab 100%);
-                animation: rotate 1s linear infinite;
-
-                
+                font-size: 18px;
+                color: #ccc;
             }
-            & .circle::before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                background-image: linear-gradient(0deg, #597ef7, #b37feb 35%, #ff7875 60%, #f759ab 100%);
-                filter: blur(35px);
+            & .stayword{
+                font-size: 18px;
+                color: #ccc;
             }
-
-            & .circle::after {
-                content: "";
-                position: absolute;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                width: 250px;
-                height: 250px;
-                border-radius: 50%;
-                background: #000;
+            & .btn{
+                border: 1px solid rgba(255, 255, 255, .8);
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 15px;
+                color: #fff;
             }
-            & .circle-span {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            & .footer{
+                font-size: 12px;
+                color: #ccc;
             }
-
-            & .end {
-                position: relative;
-                height: 50px;
-                width: 100px;
-                left: 350px;
-                border-radius: 10px;
-                font-size: 20px;
-                top: 200px;
-                background-color: #b37feb;
-                color: #85a5ff;
-            }
-            & .loding_text {
-                position: relative;
-                top: 20px;
-                left: -10px;
-            }
-        }
-
-
-        & footer {
-            height: 10vh;
-            width: 100%;
-            background-color: #d3adf7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            & .span_text {
-                font-size: 16px;
-            }
-        } 
-    }
-    
-    .footer_span {
-        animation: foot 3s;
-    }
-    
-    .btn {
-        animation: endBtn 5s;
-        animation-fill-mode: forwards;
-    }
-    
-    .owrap {
-        position: relative;
-        animation-name: hide;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-    }
-    
-    .avator_img {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 2px;
-        width: 70px;
-        height: 70px;
-        left: 200px;
-        background: #9254de;
-        box-shadow: 0 0 15px #d3adf7, 0 0 30px #d3adf7, 0 0 40px #d3adf7;
-        transform-origin: bottom right;
-    }
-    
-    @keyframes hide {
-        from {
-            bottom: 0px;
-        }
-        to {
-            bottom: 100vh;
-        }
-    }
-
-    
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
         }
     }

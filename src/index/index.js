@@ -1,3 +1,3 @@
-document.querySelector('.end').onclick = function() {
+document.querySelector('.btn').onclick = function() {
     window.location.href = 'home.html';
 }
