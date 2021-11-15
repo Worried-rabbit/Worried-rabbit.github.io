@@ -1,1 +1,0 @@
-document.querySelector(".end").onclick=function(){document.getElementById("wrap").className="owrap"};
