@@ -5,8 +5,10 @@ body {
 
 #warp {
     min-width: 1400px;
+    background: url(../../assets/img/background1.jpg) no-repeat;
+    height: 100vh;
+    overflow: hidden;
     & #header {
-        background-color: #85a5ff;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -22,30 +24,38 @@ body {
             font-size: 18px;
             padding: 0 0 30px;
         }
-
-        & img {
-            height: 80px;
-            width: 80px;
+        & .avator{
+            border-radius: 50%;
+            overflow: hidden;
+            height: 100px;
+            width: 100px;
+            background-image: url(../../img/avator.jpg);
+            background-position : -25px -1px ;
+            background-size: 160px 290px;
         }
-
-       
+        
     }
 
     & #main {
         min-width: 1400px;
-        width: 98vw;
+        width: 100vw;
+        height: 80vh;
         display: flex;
         justify-content: center;
 
         & .main-body {
             width: 62%;
-            display: flex;
-
+        
             & .main_content {
+                overflow-y:scroll;
+                max-height: 502px;
+                float: left;
                 width: 70%;
                 border-right: 1px solid #ffadd2;
                 display: flex;
-                flex-direction: column;
+                flex-direction: column;  
+                background-color: rgba(255,255,255,.4);
+                
                 
                 & .btn{
                     display: flex;
@@ -114,7 +124,8 @@ body {
             }
 
             & .main_list {
-                width: 30%;
+                float: right;
+                width: 25%;
                 padding: 20px;
                 font-size: 20px;
                 color: #000;
@@ -123,7 +134,7 @@ body {
                 align-items: center;
 
                 & .nav {
-                    width: 50%;
+                    width: 160px;
                     height: 35px;
                     display: flex;
                     justify-content: center;
@@ -131,8 +142,8 @@ body {
                     padding: 5px 10px;
                     border-radius: 6px;
                     margin: 6px 0;
-                    background-color: #91d5ff;
                     color: #ffffff;
+                    border: 1px solid #ffffff;
                 }
             }
         }
