@@ -13,7 +13,7 @@ export default class Animate {
     }
 
     static create() {
-        return new Animate()
+        return new Animate();
     }
 
     mount(el) {

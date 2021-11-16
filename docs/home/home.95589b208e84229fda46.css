@@ -9,7 +9,7 @@
 }
 
 .content {
-    animation: leftFly 1s;
+    animation: leftFly .6s;
     animation-fill-mode: forwards;
 }
 

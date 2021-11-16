@@ -7,14 +7,13 @@ export default class Translate extends Animate {
 
     exec() {
         this.el.forEach(element => {
-            this.out(element)
+            this.out(element);
         });
     }
 
     out(el) {
-        setTimeout(() => {
-            el.classList.add('content');
-        }, 20);
+        console.log(1);
+        el.classList.add('content');
     }
 
     static install() {

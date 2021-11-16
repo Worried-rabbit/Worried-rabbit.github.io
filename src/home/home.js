@@ -2,6 +2,7 @@
 import Translate from "../../assets/js/Translate.js"
 import Animate from "../../assets/js/Animate.js"
 import Ellipsis from "../../assets/js/Ellipsis.js"
+import Opicity from "../../assets/js/Opicity.js"
 import articles from "./route.js"
 String.prototype.ellipsis = function(num, symbol = '...') {
     if (this.length > num) {
@@ -34,6 +35,7 @@ if (articles.length < pageCount) {
 }
 
 function renderHTML() {
+    let elArr = [];
     for (let i = (pageIndex - 1) * pageCount; i < fisrtNum; i++) {
         let newContent = content.cloneNode(true);
         let div = HTMLparse(articles[i].article);
@@ -47,15 +49,16 @@ function renderHTML() {
             findAllText: '',
             showFindAllButton: true
         });
-        mainContent.insertBefore(newContent, document.querySelector('.btn'))
-        Animate.create().use(Translate).mount(document.querySelectorAll('.content_one'));
+        mainContent.insertBefore(newContent, document.querySelector('.btn'));
         let atitle = document.querySelectorAll('.title')
         Array.from(atitle).forEach(el => {
             el.addEventListener('click', function() {
                 window.location.href = `articleDetails.html?id=${this.dataset.id}`
             })
         })
+        elArr.push(newContent);
     }
+    Opicity.create().use(Translate).mount(elArr);
 }
 
 renderHTML();

@@ -3,24 +3,36 @@ import '../css/Ani.css'
 export default class Opicity {
     constructor() {}
 
-    exec(targets) {
-        this.addEventListener(targets);
+    static el;
+    static model;
+
+    use(Translate) {
+        Opicity.model = Translate.install;
+        return this
     }
 
-    static install() {
+    static create() {
         return new Opicity();
     }
 
-    addEventListener(targets) {
-        setTimeout(() => {
-            targets.classList.add('content')
-        }, 50)
-        let _this = this
-        let handleEventlist = function(e) {
-            _this.addEventListener(targets);
-            targets.removeEventListener('animationstart', handleEventlist);
-            console.log(e.target);
-        }
-        targets.addEventListener('animationstart', handleEventlist);
+    mount(el) {
+        this.addEventListener(Array.from(el));
     }
+
+    addEventListener(targets) {
+        let target = targets.shift();
+        let _this = this
+        if (target) {
+            target.classList.add('content');
+            let handleEventlist = function(e) {
+                if (targets.length != 0) {
+                    setTimeout(() => {
+                        _this.addEventListener(targets);
+                    }, 50);
+                }
+            }
+            target.addEventListener('animationstart', handleEventlist);
+        }
+    }
+
 }
